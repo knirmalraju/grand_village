@@ -244,20 +244,27 @@ textarea:focus {
   font-weight: 600;
 }
 .logo-mark {
-  display: flex;
   position: relative;
-  align-items: center;
-  justify-content: center;
-  background: var(--plum);
-  color: var(--ivory);
+  display: block;
+  flex-shrink: 0;
   width: 36px;
   height: 40px;
-  border-radius: 11px 11px 5px 5px;
+  overflow: hidden;
 }
-.logo-mark > svg:last-child {
+.logo-image {
+  /* The 2172 x 724 PNGs have a ~438 x 474 symbol centered at (1086, 355).
+     Frame a 480px-wide region, leaving breathing room around the symbol. */
   position: absolute;
-  bottom: 10px;
-  left: 14px;
+  display: block;
+  width: 452.5%;
+  max-width: none;
+  height: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -49%);
+}
+.logo-image-white {
+  display: none;
 }
 .public-header {
   display: flex;
@@ -2840,10 +2847,6 @@ td {
     width: 32px;
     height: 36px;
   }
-  .logo-mark > svg:last-child {
-    left: 12px;
-    bottom: 8px;
-  }
   .header-actions {
     gap: 5px;
   }
@@ -4489,9 +4492,11 @@ td {
   height: 94px;
   border-color: #ffffff14;
 }
-.premium-site .logo-mark {
-  background: #edb2b9;
-  color: #281c29;
+.premium-site .logo-image-black {
+  display: none;
+}
+.premium-site .logo-image-white {
+  display: block;
 }
 .premium-site .public-header nav a {
   color: #c5bdc8;

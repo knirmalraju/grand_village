@@ -7,7 +7,6 @@ import {
   Heart,
   MapPin,
   ArrowRight,
-  House,
   Flower2,
 } from "lucide-react";
 import { Host, money } from "@/lib/data";
@@ -15,9 +14,21 @@ import { useVillage } from "./provider";
 export function Logo() {
   return (
     <Link href="/" className="logo" aria-label="GrandVillage home">
-      <span className="logo-mark">
-        <House size={21} />
-        <Heart size={9} fill="currentColor" />
+      <span className="logo-mark" aria-hidden="true">
+        <img
+          className="logo-image logo-image-black"
+          src="/images/grand-village-logo-black.png"
+          width={2172}
+          height={724}
+          alt=""
+        />
+        <img
+          className="logo-image logo-image-white"
+          src="/images/grand-village-logo-white.png"
+          width={2172}
+          height={724}
+          alt=""
+        />
       </span>
       <span>
         Grand<span className="logo-light">Village</span>
