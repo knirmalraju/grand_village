@@ -1,0 +1,47 @@
+{
+  "name": "grandvillage",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 0.0.0.0",
+    "build": "next build --webpack",
+    "start": "next start --hostname 0.0.0.0",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "push:keys": "node scripts/generate-push-keys.mjs"
+  },
+  "dependencies": {
+    "@fontsource/dm-sans": "^5.3.0",
+    "@fontsource/dm-serif-display": "^5.3.0",
+    "@hookform/resolvers": "^5.2.0",
+    "@radix-ui/react-dialog": "^1.1.15",
+    "@react-three/drei": "^10.7.0",
+    "@react-three/fiber": "^9.3.0",
+    "@supabase/supabase-js": "^2.57.0",
+    "@tailwindcss/postcss": "^4.1.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.468.0",
+    "motion": "^12.23.0",
+    "next": "^16.0.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-hook-form": "^7.62.0",
+    "stripe": "^23.0.0",
+    "tailwind-merge": "^3.3.0",
+    "tailwindcss": "^4.1.0",
+    "three": "^0.180.0",
+    "web-push": "^3.6.7",
+    "zod": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@types/three": "^0.180.0",
+    "@types/web-push": "^3.6.4",
+    "prettier": "^3.9.10",
+    "supabase": "^2.120.0",
+    "typescript": "^5.9.0",
+    "vitest": "^5.0.3"
+  }
+}
